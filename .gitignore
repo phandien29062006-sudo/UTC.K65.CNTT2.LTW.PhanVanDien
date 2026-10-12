@@ -1,0 +1,15 @@
+
+# Visual Studio cache and user-specific files
+.vs/
+**/.vs/
+
+# Build output
+**/bin/
+**/obj/
+
+# User-specific IDE files
+*.user
+*.suo
+
+# Node.js dependencies, if any
+node_modules/

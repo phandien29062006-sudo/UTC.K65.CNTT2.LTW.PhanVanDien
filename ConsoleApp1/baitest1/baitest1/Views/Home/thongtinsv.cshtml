@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "thong tin sinh vien";
+    var sinhvien = new
+    {
+        hoTen = "Phan Dien",
+        lop = "CNTT2",
+        queQuan = "Hnoi",
+        truong = "GTVT"
+    };
+}
+<div class="alert alert-info">
+    <h1>Thông tin sinh viên</h1>
+    <p>Họ tên:@sinhvien.hoTen</p>
+    <p>Lớp :@sinhvien.lop</p>
+    <p>Quê quán: @sinhvien.queQuan</p>
+    <p>Trường: @sinhvien.truong</p>
+</div>

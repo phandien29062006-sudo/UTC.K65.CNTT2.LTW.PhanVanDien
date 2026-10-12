@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "PVD-241230675": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
