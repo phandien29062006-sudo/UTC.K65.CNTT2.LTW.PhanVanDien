@@ -1,0 +1,249 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.container {
+    max-width: 900px;
+}
+.banner {
+    height: 245px;
+    background: linear-gradient(to right, #173d78, #245397, #173d78);
+    color: white;
+    text-align: center;
+    padding-top: 45px;
+    margin-bottom: 10px;
+    position: relative;
+    
+}
+
+.banner-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+h2 {
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.separator {
+    height: 45px;
+    width: 1px;
+    background-color: rgba(255,255,255,0.6);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.azure-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+    .azure-icons span {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+
+
+.arrow {
+    position: absolute;
+    top: 105px;
+    font-size: 45px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+}
+
+.arrow-left {
+    left: 50px;
+    cursor:pointer;
+
+}
+
+.arrow-right {
+    right: 50px;
+    cursor:pointer;
+}
+
+
+.banner-description {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+    .banner-description .btn.btn-light {
+        font-size: 14px;
+        padding: 4px 8px;
+  
+    }
+    
+.banner-dots span {
+        width: 7px;
+        height: 7px;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: inline-block;
+}
+
+.banner-dots .active {
+        background-color: white;
+}
+
+
+
+.container h2 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 10px !important;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.card-body {
+    padding: 12px 5px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.main-menu {
+    height: 42px;
+    background-color: #222;
+}
+
+.menu-container {
+    max-width: 900px;
+    height: 42px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+    .menu-container a, .menu-container a:visited {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 12px;
+        padding: 0 12px;
+        transition: all 0.2s ease;
+    }
+
+        .menu-container a:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+    .menu-container .menu-logo {
+        color: white;
+        font-size: 14px;
+        padding-left: 0;
+        margin-right: 5px;
+    }
+
+
+.footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    color: #666;
+    font-size: 13px;
+}
+q
+.product-title {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight:bold;
+}
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+    .product-table th {
+        text-align: left;
+        font-weight: 600;
+        padding: 8px 5px;
+        border-bottom: 1px solid #ddd;
+        
+    }
+    .product-table td {
+        padding: 8px 5px;
+        border-bottom: 1px solid #ddd;
+        vertical-align: middle;
+    }
+.product-small-image {
+    width: 55px;
+    height: 45px;
+    object-fit: contain;
+}
+.view-button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+    .view-button:hover {
+        background-color: #449d44;
+        transform: scale(1.05);
+        transition: 0.2s;
+    }
+
+.gioithieu-name {
+    background-color: cadetblue;
+    width: 400px;
+    height:250px;
+    margin: auto;
+   gap:15px;
+}   

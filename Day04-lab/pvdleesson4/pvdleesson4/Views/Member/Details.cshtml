@@ -1,0 +1,32 @@
+﻿@model baitest1.Models.DataModels.Member
+
+@{
+    ViewData["Title"] = "Chi tiết Member";
+}
+
+<h2>Thông Tin Chi Tiết Thành Viên</h2>
+<hr />
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Mã Thành Viên (ID)</dt>
+        <dd class="col-sm-9">@Model.MemberId</dd>
+
+        <dt class="col-sm-3">Tên đăng nhập</dt>
+        <dd class="col-sm-9">@Model.Username</dd>
+
+        <dt class="col-sm-3">Mật khẩu</dt>
+        <dd class="col-sm-9">••••••••</dd>
+
+        <dt class="col-sm-3">Họ và tên</dt>
+        <dd class="col-sm-9">@Model.Fullname</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+    </dl>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.MemberId" class="btn btn-warning">Chỉnh sửa</a>
+    <a asp-action="GetMembers" class="btn btn-secondary">Quay lại danh sách</a>
+</div>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - pvdlessonMVC</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/pvdlessonMVC.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="main-menu">
+            <div class="menu-container">
+
+                <a class="menu-logo" asp-controller="Home" asp-action="Index">
+                    pvdlessonMVC
+                </a>
+
+                <a asp-controller="Home" asp-action="Index">
+                    Trang chủ
+                </a>
+
+                <a asp-controller="Introduce" asp-action="Index">
+                    Giới thiệu
+                </a>
+
+                <a href="#">
+                    Liên hệ
+                </a>
+
+                <a asp-controller="Product" asp-action="Index">Sản phẩm</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            © 2026 - pvdlessonMVC
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

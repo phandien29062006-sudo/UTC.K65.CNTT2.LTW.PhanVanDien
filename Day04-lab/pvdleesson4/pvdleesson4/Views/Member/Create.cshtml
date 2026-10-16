@@ -1,0 +1,99 @@
+﻿@* @model baitest1.Models.DataModels.Member
+
+<h2>Thêm mới thành viên</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="MemberId" class="control-label"></label>
+                <input asp-for="MemberId" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Fullname" class="control-label"></label>
+                <input asp-for="Fullname" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group mt-2">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div> *@
+
+@model baitest1.Models.DataModels.Member
+
+<h2>Thêm mới thành viên</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="Create" method="post">
+
+            <div class="form-group">
+                <label class="control-label" for="MemberId">Mã thành viên</label>
+                <input class="form-control"
+                       type="text"
+                       id="MemberId"
+                       name="MemberId"
+                       value=""
+                       readonly />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="Username">Tên đăng nhập</label>
+                <input class="form-control"
+                       type="text"
+                       id="Username"
+                       name="Username"
+                       value="" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="Fullname">Họ và tên</label>
+                <input class="form-control"
+                       type="text"
+                       id="Fullname"
+                       name="Fullname"
+                       value="" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="Password">Mật khẩu</label>
+                <input class="form-control"
+                       type="password"
+                       id="Password"
+                       name="Password"
+                       value="" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="Email">Email</label>
+                <input class="form-control"
+                       type="email"
+                       id="Email"
+                       name="Email"
+                       value="" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+
+        </form>
+
+    </div>
+</div>

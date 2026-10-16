@@ -1,0 +1,18 @@
+﻿@* @model baitest1.Models.DataModels.Member; *@
+
+@{
+    ViewData["Title"] = "Thông tin Member";
+    var member = Model as baitest1.Models.DataModels.Member;
+}
+
+<h2>Thông tin Member</h2>
+
+<p>Member Id: @Model.MemberId</p>
+
+<p>Username: @Model.Username</p>
+
+<p>Password: @Model.Password</p>
+
+<p>Fullname: @Model.Fullname</p>
+
+<p>Email: @Model.Email</p>
