@@ -1,0 +1,41 @@
+﻿
+@model NetCoreLA7.Areas.Admins.Models.Blog
+
+@{
+    ViewData["Title"] = "Xóa bài viết";
+    Layout = "~/Areas/Admins/Views/Shared/_Admins.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Xóa bài viết</h3>
+
+    <div class="card">
+        <div class="card-body">
+            <p>Bạn có chắc chắn muốn xóa bài viết này không?</p>
+
+            <dl class="row">
+                <dt class="col-sm-3">Mã bài viết</dt>
+                <dd class="col-sm-9">@Model.Id</dd>
+
+                <dt class="col-sm-3">Tiêu đề</dt>
+                <dd class="col-sm-9">@Model.Title</dd>
+
+                <dt class="col-sm-3">Tác giả</dt>
+                <dd class="col-sm-9">@Model.Author</dd>
+
+                <dt class="col-sm-3">Danh mục</dt>
+                <dd class="col-sm-9">@(Model.Category?.Name ?? "Chưa phân loại")</dd>
+            </dl>
+
+            <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+                <button type="submit" class="btn btn-danger">
+                    Xác nhận xóa
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary">
+                    Hủy
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

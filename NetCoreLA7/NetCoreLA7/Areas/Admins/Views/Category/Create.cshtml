@@ -1,0 +1,66 @@
+﻿
+@model NetCoreLA7.Areas.Admins.Models.Category
+
+@{
+    ViewData["Title"] = "Thêm danh mục";
+    Layout = "~/Areas/Admins/Views/Shared/_Admins.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Thêm danh mục</h3>
+
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">
+                        Tên danh mục
+                    </label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Image" class="form-label">
+                        Tên file ảnh
+                    </label>
+                    <input asp-for="Image" class="form-control"
+                           placeholder="category.jpg" />
+                    <span asp-validation-for="Image"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">
+                        Mô tả
+                    </label>
+                    <textarea asp-for="Description"
+                              class="form-control"
+                              rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Status" class="form-label">
+                        Trạng thái
+                    </label>
+                    <select asp-for="Status" class="form-select">
+                        <option value="1">Hiển thị</option>
+                        <option value="0">Ẩn</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Lưu danh mục
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary">
+                    Quay lại
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

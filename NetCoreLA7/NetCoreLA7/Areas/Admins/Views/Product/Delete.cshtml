@@ -1,0 +1,32 @@
+﻿
+@model NetCoreLA7.Areas.Admins.Models.Product
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+    Layout = "~/Areas/Admins/Views/Shared/_Admins.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Xóa sản phẩm</h3>
+
+    <p>Bạn có chắc chắn muốn xóa sản phẩm này không?</p>
+
+    <dl class="row">
+        <dt class="col-sm-3">Mã sản phẩm</dt>
+        <dd class="col-sm-9">@Model.Id</dd>
+
+        <dt class="col-sm-3">Tên sản phẩm</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Danh mục</dt>
+        <dd class="col-sm-9">@(Model.Category?.Name ?? "Chưa có danh mục")</dd>
+
+        <dt class="col-sm-3">Giá bán</dt>
+        <dd class="col-sm-9">@Model.Price.ToString("N0") đ</dd>
+    </dl>
+
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <button type="submit" class="btn btn-danger">Xác nhận xóa</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

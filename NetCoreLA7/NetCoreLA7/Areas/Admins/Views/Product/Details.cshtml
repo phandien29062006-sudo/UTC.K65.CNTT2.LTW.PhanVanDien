@@ -1,0 +1,48 @@
+﻿
+@model NetCoreLA7.Areas.Admins.Models.Product
+
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+    Layout = "~/Areas/Admins/Views/Shared/_Admins.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Chi tiết sản phẩm</h3>
+
+    <dl class="row">
+        <dt class="col-sm-3">Mã sản phẩm</dt>
+        <dd class="col-sm-9">@Model.Id</dd>
+
+        <dt class="col-sm-3">Tên sản phẩm</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Danh mục</dt>
+        <dd class="col-sm-9">@(Model.Category?.Name ?? "Chưa có danh mục")</dd>
+
+        <dt class="col-sm-3">Giá bán</dt>
+        <dd class="col-sm-9">@Model.Price.ToString("N0") đ</dd>
+
+        <dt class="col-sm-3">Số lượng</dt>
+        <dd class="col-sm-9">@Model.Quantity</dd>
+
+        <dt class="col-sm-3">Slug</dt>
+        <dd class="col-sm-9">@Model.Slug</dd>
+
+        <dt class="col-sm-3">Ảnh</dt>
+        <dd class="col-sm-9">@Model.Image</dd>
+
+        <dt class="col-sm-3">Mô tả</dt>
+        <dd class="col-sm-9">@Model.Description</dd>
+
+        <dt class="col-sm-3">Trạng thái</dt>
+        <dd class="col-sm-9">@(Model.Status == 1 ? "Hiển thị" : "Ẩn")</dd>
+
+        <dt class="col-sm-3">Ngày tạo</dt>
+        <dd class="col-sm-9">@Model.CreatedDate.ToString("dd/MM/yyyy HH:mm")</dd>
+    </dl>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id"
+       class="btn btn-warning">Sửa</a>
+
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</div>

@@ -1,0 +1,91 @@
+﻿
+<aside class="app-sidebar bg-dark shadow"
+       data-bs-theme="dark">
+
+    <!-- Tên hệ thống -->
+    <div class="sidebar-brand">
+        <a asp-area="Admins"
+           asp-controller="Dashboard"
+           asp-action="Index"
+           class="brand-link">
+            <span class="brand-text fw-light">
+                NetCoreLA7 Admin
+            </span>
+        </a>
+    </div>
+
+    <!-- Danh sách menu -->
+    <div class="sidebar-wrapper">
+        <nav class="mt-2">
+            <ul class="nav sidebar-menu flex-column">
+
+                <li class="nav-item">
+                    <a asp-area="Admins"
+                         asp-controller="Category"
+                        asp-action="Index"
+                        class="nav-link">
+                        <i class="nav-icon bi bi-tags"></i>
+                        <p>Danh mục</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-area="Admins"
+                       asp-controller="Category"
+                       asp-action="Index"
+                       class="nav-link">
+                        <i class="nav-icon bi bi-list-ul"></i>
+                        <p>Danh mục</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-area="Admins"
+                        asp-controller="Product"
+                         asp-action="Index"
+                         class="nav-link">
+                         <i class="nav-icon bi bi-box-seam"></i>
+                          <p>Sản phẩm</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-area="Admins"
+                       asp-controller="Blog"
+                       asp-action="Index"
+                       class="nav-link">
+                        <i class="nav-icon bi bi-journal-text"></i>
+                        <p>Blogs</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                        
+                    <a asp-area="Admins"
+                       asp-controller="Banner"
+                       asp-action="Index"
+                       class="nav-link">
+                        <i class="nav-icon bi bi-images"></i>
+                        <p>Banner</p>
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-people"></i>
+                        <p>Khách hàng</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-cart"></i>
+                        <p>Đơn hàng</p>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</aside>

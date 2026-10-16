@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - AdminLTE</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- OverlayScrollbars -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" />
+
+    <!-- CSS AdminLTE đã copy vào wwwroot -->
+    <link rel="stylesheet"
+          href="~/adminlte/css/adminlte.min.css" />
+
+    @await RenderSectionAsync("Css", required: false)
+</head>
+
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <div class="app-wrapper">
+
+        <!-- HEADER -->
+        <partial name="~/Areas/Admins/Views/Shared/_Header.cshtml" />
+
+        <!-- MENU BÊN TRÁI -->
+        <partial name="~/Areas/Admins/Views/Shared/_NavLeft.cshtml" />
+
+        <!-- MAIN: NỘI DUNG VIEW HIỂN THỊ Ở ĐÂY -->
+        <main class="app-main">
+            <div class="app-content-header">
+                <div class="container-fluid">
+                    <h3>@ViewData["Title"]</h3>
+                </div>
+            </div>
+
+            <div class="app-content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <partial name="~/Areas/Admins/Views/Shared/_Footer.cshtml" />
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"></script>
+
+    <script src="~/adminlte/js/adminlte.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
