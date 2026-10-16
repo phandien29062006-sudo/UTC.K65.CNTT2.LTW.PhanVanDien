@@ -1,0 +1,133 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+.thumbnail {
+    text-align: center;
+    border: none;
+}
+
+    .thumbnail img {
+        width: 140px;
+        height: 200px;
+        object-fit: cover;
+    }
+.banner {
+    height: 245px;
+    background: #4DB6D6;
+    color: white;
+    text-align: center;
+    padding-top: 45px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.banner-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.separator {
+    height: 45px;
+    width: 1px;
+    background-color: rgba(255,255,255,0.6);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.azure-icons {
+    display: flex;
+    align-items: center;
+    padding-left:40px;
+    gap: 50px;
+}
+
+    .azure-icons span {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+
+
+.arrow {
+    position: absolute;
+    top: 105px;
+    font-size: 45px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+}
+
+.arrow-left {
+    left: 50px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    right: 50px;
+    cursor: pointer;
+}
+
+
+.banner-description {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 25px;
+}
+
+
+    .banner-description .btn.btn-light {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+.banner-dots span {
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.banner-dots .active {
+    background-color: white;
+}
+.navbar-nav{
+    margin-left:20px;
+}

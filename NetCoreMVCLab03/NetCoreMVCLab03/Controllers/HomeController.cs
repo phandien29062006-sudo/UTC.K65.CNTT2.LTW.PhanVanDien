@@ -1,0 +1,34 @@
+using Microsoft.AspNetCore.Mvc;
+using NetCoreMVCLab03.Models;
+using System.Diagnostics;
+
+namespace NetCoreMVCLab03.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult About()
+        {
+            ViewData["Title"] = "Giới Thiệu";
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            ViewData["Title"] = "Liên Hệ";
+            return View();
+        }
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<NetCoreMVCLab03.Models.Book>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="card">
+
+                <img src="@Url.Content(item.Image)"
+                     alt="@item.Title"
+                     style="width:100%; height:200px; object-fit:contain;">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        @item.Title
+                    </h5>
+
+                    <p>
+                        Price: @item.Price
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
