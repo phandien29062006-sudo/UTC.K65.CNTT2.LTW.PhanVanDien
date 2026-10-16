@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - lesson9</title>
+    <link rel="stylesheet" href="/css/LayoutHome.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav id="navbar">
+            <ul>
+                <li><a asp-controller="Products" asp-action="Index">Danh sách sản phẩm</a></li>
+                <li><a asp-controller="Products" asp-action="Search">Tìm kiếm sản phẩm</a></li>
+                <li><a asp-controller="Products" asp-action="Hots">Danh sách bán chạy</a></li>
+                <li><a asp-controller="Products" asp-action="About">Giới thiệu</a></li>
+            </ul>
+        </nav>
+
+        <hr />
+
+        <main class="content">
+            @RenderBody()
+        </main>
+
+        <footer class="footer">
+            Copyright &copy; 2026
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
