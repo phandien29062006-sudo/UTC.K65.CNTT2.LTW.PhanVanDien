@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<WebApplication1.Models.Learner>
+
+<div class="m-5">
+    <h1>Learner List</h1>
+
+    @await Component.InvokeAsync("Major")
+
+    <div id="content">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Mã</th>
+                    <th>Tên</th>
+                    <th>Họ</th>
+                    <th>Ngành</th>
+                    <th>Ngày Nhập Học</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var s in Model)
+                {
+                    <tr>
+                        <td>@s.LearnerId</td>
+                        <td>@s.FirstMidName</td>
+                        <td>@s.LastName</td>
+                        <td>@s.Major?.MajorName</td>
+                        <td>@s.EnrollmentDate</td>
+                        <td>
+                            <a asp-action="Edit"
+                               asp-route-id="@s.LearnerId">Edit</a> |
+                            <a asp-action="Delete"
+                               asp-route-id="@s.LearnerId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-action="Create" class="btn btn-primary">
+        Create New Student
+    </a>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).on("click", "li.nav-item", function () {
+            var id = $(this).attr("id");
+
+            $.ajax({
+                url: "/Learner/LearnerByMajorID",
+                data: { mid: id },
+                success: function (response) {
+                    $("#content").html(response);
+                }
+            });
+        });
+    </script>
+}

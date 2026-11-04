@@ -1,0 +1,10 @@
+﻿@model IEnumerable<WebApplication1.Models.Major>
+
+<ul class="nav">
+    @foreach (var m in Model)
+    {
+        <li class="nav-item" id="@m.MajorId">
+            <a class="nav-link">@m.MajorName</a>
+        </li>
+    }
+</ul>

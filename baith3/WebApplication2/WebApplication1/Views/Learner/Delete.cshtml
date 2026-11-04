@@ -1,0 +1,41 @@
+﻿
+@model WebApplication1.Models.Learner
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Student</h1>
+
+<h3 class="text-danger">Bạn có chắc chắn muốn xóa sinh viên này?</h3>
+
+<div class="card p-3 mb-3" style="max-width: 500px;">
+    <dl class="row">
+        <dt class="col-sm-4">Mã sinh viên</dt>
+        <dd class="col-sm-8">@Model.LearnerId</dd>
+
+        <dt class="col-sm-4">Tên</dt>
+        <dd class="col-sm-8">@Model.FirstMidName</dd>
+
+        <dt class="col-sm-4">Họ</dt>
+        <dd class="col-sm-8">@Model.LastName</dd>
+
+        <dt class="col-sm-4">Chuyên ngành</dt>
+        <dd class="col-sm-8">@Model.Major?.MajorName</dd>
+
+        <dt class="col-sm-4">Ngày nhập học</dt>
+        <dd class="col-sm-8">@Model.EnrollmentDate.ToShortDateString()</dd>
+    </dl>
+
+    <form asp-action="Delete" asp-route-id="@Model.LearnerId" method="post">
+    <input type="hidden" name="id" value="@Model.LearnerId" />
+
+        <button type="submit" class="btn btn-danger">
+            Confirm Delete
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancel
+        </a>
+    </form>
+</div>
