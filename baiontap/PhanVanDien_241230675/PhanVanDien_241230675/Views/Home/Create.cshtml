@@ -1,0 +1,23 @@
+﻿@model Sach
+<h2>Them sach moi</h2>
+<form asp-action="Create" method="post">
+    <div>
+        <label>Mã thể loại</label>
+        <select asp-for="MaTl" asp-items="ViewBag.MaTl">
+            <option value="">Chọn thể loại</option>
+        </select>
+    </div>
+    <div>
+        <label>Tên sách</label>
+        <input asp-for="TenSach">/>
+    </div>
+    <div>
+        <label>Giá</label>
+        <input asp-for="Gia">/>
+    </div>
+    <div>
+        <label>Ảnh</label>
+        <input asp-for="Anh">/>
+    </div>
+    <button type="submit">Thêm sách</button>
+</form>

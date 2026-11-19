@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Sach>
+<!-- Begin Main Content -->
+<main class="main">
+    <div class="container">
+        <div class="banner"><img src="~/images/banner.jpg" alt="Banner" /></div>
+
+        <!-- Sách mới -->
+        <div class="section-head">
+            <h3>@ViewBag.TieuDe</h3>
+            <a href="#">Xem tất cả &rsaquo;</a>
+        </div>
+        <div class="grid">
+            @foreach (var sach in Model)
+            {
+
+                <div class="book-card">
+                <a href="#"><img src="@Url.Content("~/images/" + sach.Anh)" alt="@sach.TenSach" /></a>
+                <h2>@sach.TenSach</h2>
+                <div class="book-foot"><span class="price">@sach.Gia</span><button class="btn-buy">Thêm vào giỏ</button></div>
+            </div>
+            }
+           </div>
+    </div>
+</main>
+<!-- End Main Content -->
