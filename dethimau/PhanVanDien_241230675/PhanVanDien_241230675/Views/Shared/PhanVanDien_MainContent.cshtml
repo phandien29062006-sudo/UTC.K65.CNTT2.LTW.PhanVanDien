@@ -1,0 +1,41 @@
+﻿@model IEnumerable<HangHoa>
+<div class="main">
+	<div class="content">
+		<!-- Begin New Product -->
+		<div class="content_top">
+			<div class="heading">
+				<h3>@ViewBag.TieuDe</h3>
+				<li>
+					<a asp-controller="Home" asp-action="Create">Thêm hàng hóa</a>
+				</li>
+			</div>
+			<div class="see">
+				<p><a href="#">See all Products</a></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="section group">
+			@foreach (var item in Model)
+			{
+				<div class="grid_1_of_4 images_1_of_4">
+				<a href="#"><img src="~/images/@item.Anh" alt="" /></a>
+				<h2>@item.TenHang </h2>
+				<div class="price-details">
+					<div class="price-number">
+						<p><span class="rupees">@item.Gia</span></p>
+					</div>
+					<div class="add-cart">
+						<h4><a href="preview.html">Add to Cart</a></h4>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			}
+			
+		</div>
+		<!-- End New Product -->
+		
+		
+		<!-- End Feature Products -->
+	</div>
+</div>

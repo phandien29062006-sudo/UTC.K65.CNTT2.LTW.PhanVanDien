@@ -1,0 +1,41 @@
+﻿@model PhanVanDien_241230675.Models.HangHoa
+<h2> Them hang hoa</h2>
+<form asp-action="Create" method="post">
+    <div>
+        <label>MaLoai</label>
+        <select asp-for="MaLoai" class form-control>
+            @foreach(var loai in ViewBag.LoaiHang) 
+            {
+                <option value="@loai.MaLoai">
+                    @loai.TenLoai
+                </option>              
+            }
+        </select>
+    </div>
+    <div>
+        <label>
+            Ten Hang
+        </label>
+        <input asp-for="TenHang" class="form-control"/>
+    </div>
+     <div>
+        <label>
+            Gia
+        </label>
+        <input asp-for="Gia" class="form-control"/>
+          <span asp-validation-for="Gia" class="text-danger"></span>
+    </div>
+     <div>
+        <label>
+            Anh
+        </label>
+        <input asp-for="Anh" class="form-control"/>
+          <span asp-validation-for="Anh" class="text-danger"></span>
+    </div>
+    <button type="sumbit">Thêm</button>
+</form>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
