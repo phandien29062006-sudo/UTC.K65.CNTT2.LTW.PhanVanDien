@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TaiSan>
+<main class="main">
+    <div class="container">
+        <div class="banner"><img src="images/banner.jpg" alt="Banner" /></div>
+
+        <!-- Tài sản mới nhập -->
+        <div class="section-head">
+            <h3>@ViewBag.TieuDe</h3>
+            <a href="#">Xem tất cả &rsaquo;</a>
+            <li>
+                <a asp-controller="Home" asp-action="Create">
+                    Them
+                </a>
+            </li>
+        </div>
+
+        <div class="grid">
+            @foreach(var item in Model)
+            {
+            <div class="asset-card">
+                <a href="#"><img src="~/images/@item.Anh" alt="" /></a>
+                <h2>@item.TenTs</h2>
+                <div class="asset-foot"><span class="price">@item.NguyenGia tr</span><button class="btn-buy">Chi tiết</button></div>
+                   <a asp-controller="Home" asp-action="Edit" asp-route-maTs="@item.MaTs">Sửa</a>
+            </div>   
+            }
+         
+  
+        </div>
+
+    
+    </div>
+</main>

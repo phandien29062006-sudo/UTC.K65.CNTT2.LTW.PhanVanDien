@@ -1,0 +1,27 @@
+﻿@model TaiSan
+<h2>Thêm tài sản</h2>
+<form asp-action="Create" post="method">
+    <div class="form-control">
+        <label>MaLoai</label>
+        <select name="MaLoai" class="form-control">
+            @foreach(var lts in ViewBag.LoaiTaiSan)
+                {
+                   <option value="@lts.MaLoai">
+                       @lts.TenLoai
+                  </option>
+                }
+            </select>
+    </div>
+    <div class="form-control">
+        <label>Ten tai san</label>
+        <input name="TenTs" class="form-control"/>
+    </div>
+      <div class="form-control">
+        <label>Gia</label>
+        <input name="NguyenGia" class="form-control"/>
+    </div>
+      <div class="form-control">
+        <label>Anh</label>
+        <input name="Anh" class="form-control"/>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
